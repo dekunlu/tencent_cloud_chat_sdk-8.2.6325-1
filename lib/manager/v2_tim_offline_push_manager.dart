@@ -24,18 +24,18 @@ class V2TIMOfflinePushManager {
   /// isTPNSToken 是否使用tpnstoken
   /// ```
   ///
-  Future<V2TimCallback> setOfflinePushConfig({
+  Future setOfflinePushConfig({
     required double businessID,
     required String token,
     bool isTPNSToken = false,
     bool isVoip = false,
   }) async {
-    return TencentCloudChatSdkPlatform.instance.setOfflinePushConfig(
-      businessID: businessID,
-      token: token,
-      isTPNSToken: isTPNSToken,
-      isVoip: isVoip,
-    );
+    // return TencentCloudChatSdkPlatform.instance.setOfflinePushConfig(
+    //   businessID: businessID,
+    //   token: token,
+    //   isTPNSToken: isTPNSToken,
+    //   isVoip: isVoip,
+    // );
   }
 
   /// APP 检测到应用退后台时可以调用此接口，可以用作桌面应用角标的初始化未读数量。
@@ -50,11 +50,11 @@ class V2TIMOfflinePushManager {
   /// unreadCount	未读数量
   /// callback	回调
   /// ```
-  Future<V2TimCallback> doBackground({
+  Future doBackground({
     required int unreadCount,
   }) async {
-    return TencentCloudChatSdkPlatform.instance
-        .doBackground(unreadCount: unreadCount);
+    // return TencentCloudChatSdkPlatform.instance
+    //     .doBackground(unreadCount: unreadCount);
   }
 
   /// APP 检测到应用进前台时可以调用此接口
@@ -68,8 +68,8 @@ class V2TIMOfflinePushManager {
   /// ```
   /// callback	回调
   /// ```
-  Future<V2TimCallback> doForeground() async {
-    return TencentCloudChatSdkPlatform.instance.doForeground();
+  Future doForeground() async {
+    // return TencentCloudChatSdkPlatform.instance.doForeground();
   }
 
   ///@nodoc
